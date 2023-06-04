@@ -513,15 +513,18 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     justify-content: space-between;
 }
+.client__logos::-webkit-scrollbar{
+    width: 0;
+}
 
 .client__logo {
     height: 6.5rem;
     max-width: 18rem;
 }
 
-@media(max-width: 1240px) {
+@media screen and (max-width: 1240px), screen and (min-width: 1240px) {
     .client__logos {
-        overflow-x: scroll;
+        overflow-x: auto;
         padding: var(--gutter-normal);
     }
 
